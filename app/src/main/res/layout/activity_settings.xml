@@ -40,7 +40,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/settings_height_size"
-            android:layout_marginEnd="6dp">
+            android:layout_marginEnd="8dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/settings_height_size"
-            android:layout_marginEnd="12dp">
+            android:layout_marginEnd="@dimen/settings_margin_end_size">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/settings_height_size"
-            android:layout_marginEnd="12dp">
+            android:layout_marginEnd="@dimen/settings_margin_end_size">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/settings_height_size"
-            android:layout_marginEnd="12dp">
+            android:layout_marginEnd="@dimen/settings_margin_end_size">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

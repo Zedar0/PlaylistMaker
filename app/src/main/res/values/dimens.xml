@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_22">24sp</dimen>
     <dimen name="text_size_16">16sp</dimen>
-    <dimen name="settings_height_size">61dp</dimen>
+    <dimen name="settings_height_size">64dp</dimen>
+    <dimen name="main_button_between_icon_text_size">12dp</dimen>
+    <dimen name="settings_margin_end_size">12dp</dimen>
 </resources>

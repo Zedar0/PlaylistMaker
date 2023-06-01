@@ -13,8 +13,7 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_settings)
         val imageReturn = findViewById<ImageView>(R.id.return_button)
         imageReturn.setOnClickListener {
-            val returnIntent = Intent(this, MainActivity::class.java)
-            startActivity(returnIntent)
+        finish()
         }
     }
 }
