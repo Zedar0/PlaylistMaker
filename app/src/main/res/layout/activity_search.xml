@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/SecondaryActivityStyle"
     tools:context=".SearchActivity">
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="Здесь будет экран поиска."/>
+    <LinearLayout
+        style="@style/ReturnButtonAndTextLayoutStyle">
+        <ImageView
+            style="@style/ReturnButtonStyle"
+            android:id="@+id/return_button"
+            android:src="@drawable/return_icon"/>
+        <TextView
+            style="@style/ReturnTextStyle"
+            android:text="@string/search_text" />
+    </LinearLayout>
+    <FrameLayout
+        style="@style/SearchLayout"
+        android:id="@+id/container"
+        android:theme="@style/Theme.PlaylistMaker.SearchStringColor"
+        tools:context=".SettingsActivity">
+        <EditText
+            android:id="@+id/inputEditText"
+            style="@style/SearchHintStyle"/>
 
-</FrameLayout>
+        <ImageView
+            style="@style/SearchClearStyle"
+            android:id="@+id/clearIcon"/>
+    </FrameLayout>
+
+</LinearLayout>
