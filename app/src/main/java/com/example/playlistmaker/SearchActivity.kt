@@ -10,7 +10,7 @@ import android.widget.EditText
 import android.widget.ImageView
 
 class SearchActivity : AppCompatActivity() {
-    var editText:String = ""
+    private var editText:String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -47,9 +47,6 @@ class SearchActivity : AppCompatActivity() {
             View.VISIBLE
         }
     }
-    companion object {
-        const val SEARCH_TEXT = "SEARCH_TEXT"
-    }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -60,6 +57,9 @@ class SearchActivity : AppCompatActivity() {
         Log.d("EDIT_TEXT", "editText before $editText")
         editText = savedInstanceState.getString(SEARCH_TEXT,"")
         Log.d("EDIT_TEXT", "editText after $editText")
+    }
+    companion object {
+        private const val SEARCH_TEXT = "SEARCH_TEXT"
     }
 
 }
