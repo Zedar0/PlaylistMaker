@@ -1,117 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+    style="@style/SecondaryActivityStyle">
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="4dp">
+        style="@style/ReturnButtonAndTextLayoutStyle">
         <ImageView
+            style="@style/ReturnButtonStyle"
             android:id="@+id/return_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:scaleType="center"
-            android:src="@drawable/light_mode"
-            android:foreground="?attr/selectableItemBackground"/>
+            android:src="@drawable/return_icon"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="12dp"
-            android:textAllCaps="false"
-            android:textSize="@dimen/text_size_22"
-            android:textStyle="bold"
-            android:text="@string/settings_text"
-            android:textColor="@color/black"/>
+            style="@style/ReturnTextStyle"
+            android:text="@string/settings_text" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="16dp">
+        android:layout_marginTop="@dimen/dimention_24dp">
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/settings_height_size"
-            android:layout_marginEnd="6dp">
+            style="@style/SettingsParametersStyle">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|center"
-                android:textAllCaps="false"
-                android:textSize="@dimen/text_size_16"
-                android:text="@string/dark_theme"
-                android:textColor="@color/black"/>
+                style="@style/SettingsParameterTextStyle"
+                android:text="@string/dark_theme" />
             <Switch
-                android:layout_width="56dp"
-                android:layout_height="40dp"
-                android:layout_gravity="end|center"
-                android:src="@drawable/swiitch_off"
-                />
+                style="@style/SwitchDayNightStyle"
+                android:theme="@style/Theme.PlaylistMaker.SwitchOverlay"
+                android:src="@drawable/swiitch_off"/>
         </FrameLayout>
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/settings_height_size"
-            android:layout_marginEnd="12dp">
+            android:id="@+id/share_app"
+            style="@style/SettingsParametersStyle">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|center"
-                android:textAllCaps="false"
-                android:textSize="@dimen/text_size_16"
-                android:text="@string/share_text"
-                android:textColor="@color/black"/>
+                style="@style/SettingsParameterTextStyle"
+                android:text="@string/share_text" />
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end|center"
-                android:src="@drawable/share_icon"
-                />
+                style="@style/SettingsParameterIconStyle"
+                android:src="@drawable/share_icon"/>
         </FrameLayout>
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/settings_height_size"
-            android:layout_marginEnd="12dp">
+            android:id="@+id/send_to_support"
+            style="@style/SettingsParametersStyle">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|center"
-                android:textAllCaps="false"
-                android:textSize="@dimen/text_size_16"
-                android:text="@string/support_text"
-                android:textColor="@color/black"/>
+                style="@style/SettingsParameterTextStyle"
+                android:text="@string/support_text"/>
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end|center"
-                android:src="@drawable/support_icon"
-                />
+                style="@style/SettingsParameterIconStyle"
+                android:src="@drawable/support_icon"/>
         </FrameLayout>
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/settings_height_size"
-            android:layout_marginEnd="12dp">
+            android:id="@+id/user_agreement"
+            style="@style/SettingsParametersStyle">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|center"
-                android:textAllCaps="false"
-                android:textSize="@dimen/text_size_16"
-                android:text="@string/user_guide_text"
-                android:textColor="@color/black"/>
+                style="@style/SettingsParameterTextStyle"
+                android:text="@string/user_guide_text"/>
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end|center"
-                android:src="@drawable/user_guide_icon"
-                />
+                style="@style/SettingsParameterIconStyle"
+                android:src="@drawable/user_guide_icon"/>
         </FrameLayout>
     </LinearLayout>
 
