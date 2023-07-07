@@ -48,5 +48,9 @@
         <item name="android:background">@drawable/rounded_corner_search</item>
         <item name="android:textColor">@color/black</item>
     </style>
+    <style name="TrackArtistAndTimeStyle">
+        <item name="android:textColor">@color/icon_day_mode</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
 
 </resources>

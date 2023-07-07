@@ -16,4 +16,7 @@
     <style name="Theme.PlaylistMaker.SearchStringColor">
         <item name="colorSecondary">@color/white</item>
     </style>
+    <style name="TrackArtistAndTimeStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>

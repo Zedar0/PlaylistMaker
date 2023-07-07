@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?attr/colorSecondary"
     android:orientation="vertical"
     tools:context=".SearchActivity">
@@ -63,5 +63,13 @@
             android:visibility="gone"
             android:foreground="?attr/selectableItemBackground"/>
     </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTrackList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimention_16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/track_item"/>
 
 </LinearLayout>
