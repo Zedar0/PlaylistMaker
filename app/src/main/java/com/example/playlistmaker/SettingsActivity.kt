@@ -17,23 +17,24 @@ class SettingsActivity : AppCompatActivity() {
         imageReturn.setOnClickListener {
         finish()
         }
-        val shareApp = findViewById<FrameLayout>(R.id.share_app)
+        val shareApp = findViewById<FrameLayout>(R.id.button_share_app)
         shareApp.setOnClickListener{
            val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.practicum_link))
             shareIntent.setType("text/plain")
             startActivity(Intent.createChooser(shareIntent, null))
         }
-        val sendToSupport = findViewById<FrameLayout>(R.id.send_to_support)
+        val sendToSupport = findViewById<FrameLayout>(R.id.button_send_to_support)
         sendToSupport.setOnClickListener {
-            val sendToSupportIntent = Intent(Intent.ACTION_SENDTO)
-            sendToSupportIntent.data = Uri.parse("mailto:")
-            sendToSupportIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.my_email)))
-            sendToSupportIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.email_text) )
-            sendToSupportIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_theme))
-            startActivity(sendToSupportIntent)
+                Intent(Intent.ACTION_SENDTO).apply {
+                data = Uri.parse("mailto:")
+                putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.my_email)))
+                putExtra(Intent.EXTRA_TEXT, getString(R.string.email_text) )
+                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_theme))
+                startActivity(this)
+            }
         }
-        val userAgreement = findViewById<FrameLayout>(R.id.user_agreement)
+        val userAgreement = findViewById<FrameLayout>(R.id.button_user_agreement)
         userAgreement.setOnClickListener {
             val userAgreementIntent = Intent(Intent.ACTION_VIEW)
             userAgreementIntent.setData(Uri.parse(getString(R.string.user_agreement_link)))
